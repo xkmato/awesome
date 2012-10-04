@@ -18,6 +18,7 @@ class ArtPiece(models.Model):
 
 class Credits(models.Model):
     name = models.CharField(max_length=100)
+    register_user = models.ForeignKey(User)
     description = models.TextField()
     art_piece = models.ForeignKey(ArtPiece)
 
@@ -32,7 +33,14 @@ class Like(models.Model):
     def __unicode__(self):
         return self.liker.username
 
+class ExtraAttributes(models.Model):
+    pass
+
+class Comment(models.Model):
+    pass
+
 class Gallery(models.Model):
+    owners = models.ManyToManyField(User)
     name = models.CharField(max_length=100)
     art_pieces = models.ManyToManyField(ArtPiece)
     added_on = models.DateTimeField(auto_now_add=True)
