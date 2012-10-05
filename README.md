@@ -42,10 +42,4 @@ Convention
  - All attributes and function names must be all lower case different words separated with "_" eg def awesome_ken():
  - Use real english names that make sense to name anything. Do not use short hand
 
- I have added the admin page, please check it out.
-    - First run syncdb
-    - if syncdb does not automatically create superuser for you:
-        - Create a super user to access admin page by using the command 'python manage.py createsuperuser' in the project root
-    - You can also create file called localsettings.py to add custom settings or specify a different database
-    - If for what ever reason you want to specify a different sqlite db please make sure you add it to the .gitignore file so you dont share it with us
  Add all the suggestions to this file
