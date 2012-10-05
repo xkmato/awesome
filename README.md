@@ -7,6 +7,10 @@ What you have to do in advance
 
 - Email me your github username to kenneth@kudu.ug
 
+- Run syncdb
+- If you have custom settings or want a custom db then please create a localsettings.py file
+- If for some reason you want a different sqlite database then please also put it's file name into the .gitingnore file
+
 How to get the app
 
 - Go to the folder you want to run your project using command
@@ -41,5 +45,7 @@ Convention
  - All class names start with capital letters and each new word does as well eg class AwesomeKen:
  - All attributes and function names must be all lower case different words separated with "_" eg def awesome_ken():
  - Use real english names that make sense to name anything. Do not use short hand
+
+
 
  Add all the suggestions to this file
