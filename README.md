@@ -42,4 +42,7 @@ Convention
  - All attributes and function names must be all lower case different words separated with "_" eg def awesome_ken():
  - Use real english names that make sense to name anything. Do not use short hand
 
+also please this may go without mentioning but all the same, I hope you guys know that the commit message you put should meaningful
+This can help us choose what commits to give special attention
+
  Add all the suggestions to this file
