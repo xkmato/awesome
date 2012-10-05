@@ -7,14 +7,45 @@ class UserAttached(models.Model):
     class Meta:
         abstract = True
 
+class Respect(models.Model):
+    respecter = models.ForeignKey(User,related_name='respecter')
+    respected = models.ForeignKey(User,related_name='respected')
+
 class UserProfile(UserAttached):
-    pass
+    about_you = models.TextField()
+
+    def __unicode__(self):
+        return self.user.username
+
+    def get_respects(self):
+        return  Respect.objects.filter(respected=self.user)
+
+    def get_users_respected(self):
+        return Respect.objects.filter(respecter=self.user)
+
+    def get_art_pieces(self):
+        pass
+
+    def get_credits(self):
+        return self.user.credit_set.all()
+
+    def get_art_liked(self):
+        return self.like_set.all()
+
 
 class Contacts(UserAttached):
-    pass
+    other_email = models.EmailField()
+    mobile_phone = models.CharField(max_length=20)
+    home_phone = models.CharField(max_length=20)
+    website = models.URLField()
+
+    def __unicode__(self):
+        return self.user.username
 
 class Location(UserAttached):
-    pass
+    country = models.CharField(max_length=20)
+    region = models.CharField(max_length=20)
 
-class Respect(models.Model):
-    pass
+    def __unicode__(self):
+        return self.country
+
