@@ -5622,3 +5622,11 @@ a.badge:hover {
 .affix {
   position: fixed;
 }
+.respect
+{
+	margin:0px 0px 8px 0px;
+	list-style:none;
+	}
+.respect li{
+	float:left;
+	margin-right:10px;}
