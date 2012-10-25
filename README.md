@@ -1,5 +1,8 @@
 awesome
 =======
+Ok guys this goes without saying but please take time and give the whole idea some thought before you push code up. It is stupid if you upload totally irrelevant shit just because you want to beat a deadline.
+
+Also know that beating the deadline is actually important
 
 Code-Name Awesome is the to be 24/7 Online Digital all Arts Festival.
 
